@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:backgroundTint="@android:color/background_light"
+    android:backgroundTintMode="src_in">
+    <ImageView
+        android:src="@mipmap/cafelogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/logoImageView"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+    <Button
+        android:text="Order Now!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderButton" />
+    <Button
+        android:text="View Cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartButton" />
+    <Button
+        android:text="Take a picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/takePictureButton" />
+    <Button
+        android:text="Go to Jen's Cafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapButton" />
+    <Button
+        android:text="About Jen's Cafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutButton" />
+</LinearLayout>

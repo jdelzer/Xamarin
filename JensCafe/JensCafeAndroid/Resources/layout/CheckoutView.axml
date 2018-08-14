@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ImageView
+        android:src="@mipmap/creditcards"
+        android:layout_width="match_parent"
+        android:layout_height="89.0dp"
+        android:id="@+id/creditCardImageView"
+        android:layout_marginBottom="5.5dp" />
+    <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:hint="First Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstNameEditText"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:tooltipText="First Name"
+        app:backgroundTint="@android:color/background_light" />
+    <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:hint="Last Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastNameEditText"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:tooltipText="Last Name"
+        app:backgroundTint="@android:color/background_light" />
+    <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:hint="Street Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressEditText"
+        android:inputType="textPostalAddress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:tooltipText="Street Address"
+        app:backgroundTint="@android:color/background_light" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.0dp"
+        android:layout_marginBottom="13.0dp">
+        <AutoCompleteTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="170.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityAutoCompleteTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:tooltipText="City"
+            app:backgroundTint="@android:color/background_light"
+            android:hint="City"
+            android:inputType="textPostalAddress"
+            android:layout_alignParentLeft="true" />
+        <Spinner xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="181.0dp"
+            android:layout_height="39.5dp"
+            android:layout_toRightOf="@id/cityAutoCompleteTextView"
+            android:id="@+id/stateSpinner"
+            android:hint="State"
+            android:tooltipText="State"
+            android:layout_marginRight="10.0dp" />
+        <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:inputType="phone"
+            android:layout_width="172.5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityAutoCompleteTextView"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/phoneEditText"
+            app:backgroundTint="@android:color/background_light"
+            android:hint="Phone"
+            android:layout_alignParentRight="true" />
+        <TableLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalDetailsTable"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/phoneEditText">
+            <TableRow
+                android:id="@+id/tableRow1">
+                <TextView
+                    android:text="Order Subtotal:"
+                    android:id="@+id/orderSubtotalLabel"
+                    android:textAlignment="textEnd"
+                    android:layout_column="0" />
+                <TextView
+                    android:text="$0.00"
+                    android:layout_column="1"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/orderSubtotalTextView"
+                    android:padding="5dp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow2">
+                <TextView
+                    android:text="Tax:"
+                    android:id="@+id/orderTaxLabel"
+                    android:textAlignment="textEnd"
+                    android:layout_column="0" />
+                <TextView
+                    android:text="0.00"
+                    android:id="@+id/orderTaxTextView"
+                    android:textAlignment="textEnd"
+                    android:layout_column="1"
+                    android:padding="5dp" />
+                <TableRow
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:id="@+id/tableRow4" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow3">
+                <TextView
+                    android:text="Order Total:"
+                    android:layout_column="0"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/orderTotalLabel" />
+                <TextView
+                    android:text="$0.00"
+                    android:layout_column="1"
+                    android:textAlignment="textEnd"
+                    android:id="@+id/orderTotalTextView"
+                    android:padding="5dp" />
+            </TableRow>
+        </TableLayout>
+        <EditText xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:inputType="textPostalAddress|number|numberSigned"
+            android:layout_width="170.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zipCodeEditText"
+            android:hint="Zip Code"
+            app:backgroundTint="@android:color/background_light"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/phoneEditText"
+            android:layout_alignBaseline="@id/phoneEditText"
+            android:layout_below="@id/cityAutoCompleteTextView" />
+    </RelativeLayout>
+    <Button
+        android:text="Continue to Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/goToPaymentButton"
+        android:background="@android:color/holo_green_light"
+        android:layout_marginBottom="5dp" />
+</LinearLayout>
